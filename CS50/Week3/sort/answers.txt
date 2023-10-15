@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: In a file that is already sorted, sort1 is the fastest for sorting.
+
+sort2 uses: Merge sort
+
+How do you know?: The sort2 algorithm is the fastest when sorting the random5000.txt file.
+
+sort3 uses: Selection sort
+
+How do you know?: sort3 is the slowest in sorting within an already sorted file.
