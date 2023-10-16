@@ -160,9 +160,26 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            image[i - 1][j - 1].rgbtRed = sqrt(pow(sumRed_gx, 2) + pow(sumRed_gy, 2));
-            image[i - 1][j - 1].rgbtGreen = sqrt(pow(sumGreen_gx, 2) + pow(sumGreen_gy, 2));
-            image[i - 1][j - 1].rgbtBlue = sqrt(pow(sumBlue_gx, 2) + pow(sumBlue_gy, 2));
+            int red = round(sqrt(pow(sumRed_gx, 2) + pow(sumRed_gy, 2)));
+            int green = round(sqrt(pow(sumGreen_gx, 2) + pow(sumGreen_gy, 2)));
+            int blue = round(sqrt(pow(sumBlue_gx, 2) + pow(sumBlue_gy, 2)));
+
+            if (red > 255)
+            {
+                red = 255;
+            }
+            if (green > 255)
+            {
+                green = 255;
+            }
+            if (blue > 255)
+            {
+                blue = 255;
+            }
+
+            image[i - 1][j - 1].rgbtRed = red;
+            image[i - 1][j - 1].rgbtGreen = green;
+            image[i - 1][j - 1].rgbtBlue = blue;
         }
     }
 
