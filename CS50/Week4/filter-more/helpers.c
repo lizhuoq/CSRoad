@@ -47,14 +47,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    int upper_bound;
-    int lower_bound;
-    int left_bound;
-    int right_bound;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
+            int upper_bound;
+            int lower_bound;
+            int left_bound;
+            int right_bound;
             if ((i - 1) < 0)
             {
                 upper_bound = i;
