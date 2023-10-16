@@ -133,7 +133,27 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    
+
+    for (int i = 1; i < height + 1; i++)
+    {
+        for (int j = 1; j < width + 1; j++)
+        {
+            WORD sumRed = 0;
+            WORD sumGreen = 0;
+            WORD sumBlue = 0;
+
+            for (int m = (i - 1); m <= i + 1; m++)
+            {
+                for (int n = (j - 1); n <= (j + 1); n++)
+                {
+                    sumRed += image_copy[m][n];
+                    sumGreen += image_copy[m][n];
+                    sumBlue += image_copy[m][n];
+                }
+            }
+            
+        }
+    }
 
 
     return;
