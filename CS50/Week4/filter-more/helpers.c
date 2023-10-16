@@ -115,15 +115,22 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     int gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
     int gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
-    RGBTRIPLE image_copy[height][width];
-    for (int i = 0; i < height; i++)
+    RGBTRIPLE image_copy[height + 2][width + 2];
+    for (int i = 0; i < height + 2; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < width + 2; j++)
         {
-            image_copy[i][j] = image[i][j];
+            if (i == 0 || i == (height + 1) || j == 0 || j == (width + 1))
+            {
+
+            }
+            else
+            {
+                image_copy[i][j] = image[i - 1][j - 1];
+            }
         }
     }
 
-    
+
     return;
 }
