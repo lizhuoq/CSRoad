@@ -16,10 +16,15 @@ int main(int argc, char *argv[])
         printf("Usage: ./reverse input.wav output.wav\n");
         return 1;
     }
-    return 0;
 
     // Open input file for reading
     // TODO #2
+    FILE *file = fopen(argv[1], "r");
+    if (file == NULL)
+    {
+        printf("Error\n");
+        return 1;
+    }
 
     // Read header
     // TODO #3
