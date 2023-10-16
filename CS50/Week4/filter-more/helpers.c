@@ -23,7 +23,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
     {
-        RGBTRIPLE *image_copy = malloc(width * sizeof(BYTE));
+        RGBTRIPLE image_copy[width];
         for (int j = 0; j < width; j++)
         {
             image_copy[j] = image[i][j];
@@ -32,7 +32,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             image[i][j] = image_copy[width - j];
         }
-        free(image_copy);
     }
 }
 
