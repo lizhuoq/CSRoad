@@ -89,9 +89,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             BYTE sum[3];
-            sum[0] = 0;
-            sum[1] = 0;
-            sum[2] = 0;
+            sum[0] = 0x00;
+            sum[1] = 0x00;
+            sum[2] = 0x00;
             int count = 0;
             for (int m = upper_bound; m <= lower_bound; m++)
             {
