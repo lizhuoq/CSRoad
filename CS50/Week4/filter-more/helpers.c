@@ -31,6 +31,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             image[i][j] = image_copy[width - j];
         }
+        free(image_copy);
     }
     return;
 }
