@@ -1,4 +1,5 @@
 #include "helpers.h"
+#include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -151,6 +152,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sumBlue += image_copy[m][n];
                 }
             }
+
             
         }
     }
