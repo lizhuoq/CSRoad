@@ -1,5 +1,6 @@
 #include "helpers.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -33,7 +34,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         }
         free(image_copy);
     }
-    return;
 }
 
 // Blur image
