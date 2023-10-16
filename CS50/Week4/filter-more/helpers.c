@@ -159,6 +159,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sumBlue_gy += (image_copy[m][n].rgbtBlue * gy[m - (i - 1)][n - (j - 1)]);
                 }
             }
+
+            image[i - 1][j - 1].rgbtRed = sqrt(pow(sumRed_gx, 2) + pow(sumRed_gy, 2));
+            image[i - 1][j - 1].rgbtGreen = sqrt(pow(sumGreen_gx, 2) + pow(sumGreen_gy, 2));
+            image[i - 1][j - 1].rgbtBlue = sqrt(pow(sumBlue_gx, 2) + pow(sumBlue_gy, 2));
         }
     }
 
