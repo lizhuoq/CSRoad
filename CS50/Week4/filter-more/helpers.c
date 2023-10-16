@@ -150,11 +150,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int n = (j - 1); n <= (j + 1); n++)
                 {
-                    sumRed_gx += (image_copy[m][n] * gx[m - (i - 1)][n - (j - 1)]);
-                    sumGreen_gx += (image_copy[m][n] * gx[m - (i - 1)][n - (j - 1)]);
-                    sumBlue_gx += (image_copy[m][n] * gx[m - (i - 1)][n - (j - 1)]);
+                    sumRed_gx += (image_copy[m][n].rgbtRed * gx[m - (i - 1)][n - (j - 1)]);
+                    sumGreen_gx += (image_copy[m][n].rgbtGreen * gx[m - (i - 1)][n - (j - 1)]);
+                    sumBlue_gx += (image_copy[m][n].rgbtBlue * gx[m - (i - 1)][n - (j - 1)]);
 
-                    sumRed_gy += (image_copy)
+                    sumRed_gy += (image_copy[m][n] * gy[m - (i - 1)][n - (j - 1)]);
+                    sumGreen_gy += ()
                 }
             }
         }
