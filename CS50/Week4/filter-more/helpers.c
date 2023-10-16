@@ -47,41 +47,45 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
+    int upper_bound;
+    int lower_bound;
+    int left_bound;
+    int right_bound;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
             if ((i - 1) < 0)
             {
-                int upper_bound = i;
+                upper_bound = i;
             }
             else
             {
-                int upper_bound = (i - 1);
+                upper_bound = (i - 1);
             }
             if ((j - 1) < 0)
             {
-                int left_bound = j;
+                left_bound = j;
             }
             else
             {
-                int left_bound = (j - 1);
+                left_bound = (j - 1);
             }
             if ((i + 1) >= height)
             {
-                int lower_bound = i;
+                lower_bound = i;
             }
             else
             {
-                int lower_bound = (i + 1);
+                lower_bound = (i + 1);
             }
             if ((j + 1) >= width)
             {
-                int right_bound = j;
+                right_bound = j;
             }
             else
             {
-                int right_bound = (j + 1);
+                right_bound = (j + 1);
             }
 
             int sum = 0;
