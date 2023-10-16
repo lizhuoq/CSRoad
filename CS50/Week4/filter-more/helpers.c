@@ -92,7 +92,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             WORD sumRed = 0;
             WORD sumGreen = 0;
             WORD sumBlue = 0;
-            int count = 0;
+            float count = 0;
             for (int m = upper_bound; m <= lower_bound; m++)
             {
                 for (int n = left_bound; n <= right_bound; n++)
