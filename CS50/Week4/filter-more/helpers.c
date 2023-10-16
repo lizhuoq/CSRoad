@@ -139,12 +139,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 1; j < width + 1; j++)
         {
-            DWORD sumRed_gx = 0;
-            DWORD sumGreen_gx = 0;
-            DWORD sumBlue_gx = 0;
-            DWORD sumRed_gy = 0;
-            DWORD sumGreen_gy = 0;
-            DWORD sumBlue_gy = 0;
+            float sumRed_gx = 0;
+            float sumGreen_gx = 0;
+            float sumBlue_gx = 0;
+            float sumRed_gy = 0;
+            float sumGreen_gy = 0;
+            float sumBlue_gy = 0;
 
             for (int m = (i - 1); m <= i + 1; m++)
             {
