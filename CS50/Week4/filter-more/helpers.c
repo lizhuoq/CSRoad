@@ -122,7 +122,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         {
             if (i == 0 || i == (height + 1) || j == 0 || j == (width + 1))
             {
-                image_copy[i][j]
+                image_copy[i][j].rgbtBlue = 0;
+                image_copy[i][j].rgbtGreen = 0;
+                image_copy[i][j].rgbtRed = 0;
             }
             else
             {
@@ -130,6 +132,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     }
+
+    
 
 
     return;
